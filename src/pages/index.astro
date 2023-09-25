@@ -1,0 +1,10 @@
+---
+import BaseTemplate from "../layouts/BaseTemplate.astro";
+import Header from "../components/Header";
+import tailwind from "@astrojs/tailwind";
+---
+
+<BaseTemplate>
+    <Header client:load/>
+    <p>Hello world</p>
+</BaseTemplate>
