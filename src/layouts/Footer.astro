@@ -1,11 +1,21 @@
 ---
-import { Image } from 'astro:assets'
+import Column from "../components/Column";
+import {Image} from "astro:assets";
 import casaDulceLogo from '../assets/BonLogo.png'
 ---
-<div class="w-full p6 text-xl flex space-between bg-gray border-b p-6">
-    <div class="max-w-screen-xl w-full mx-auto flex justify-between ">
-        <nav>
-            <a href="/link">a</a>
-        </nav>
+<div class="w-full p6 text-xl flex space-between bg-slate-900 border-b p-20 text-slate-200">
+    <div class="max-w-screen-xl w-full mx-auto flex justify-between">
+        <Column count={3}>
+            <div>
+                <Image class="mb-8" src={casaDulceLogo} alt="Case Dulce logo" width="250" />
+                <p>Information</p>
+            </div>
+            <nav>
+                <a href="/link">a</a>
+            </nav>
+            <nav>
+                <a href="/link">a</a>
+            </nav>
+        </Column>
     </div>
 </div>
