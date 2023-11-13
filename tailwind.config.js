@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: ['./src/**/*.{html,jsx,tsx,astro}'],
   theme: {
@@ -98,13 +101,24 @@ module.exports = {
       serif: ['Merriweather', 'serif'],
     },
     extend: {
+      fontFamily: {
+        sans: ["WorkSans", ...defaultTheme.fontFamily.sans],
+      },
       spacing: {
         '8xl': '96rem',
         '9xl': '128rem',
+      },
+      fontSize: {
+        'xl2': '2rem',
+        'xl3': '3rem',
+        'xl4': '4rem',
       },
       borderRadius: {
         '4xl': '2rem',
       }
     }
   },
+  plugins: [
+      require('@astrojs/tailwind')
+  ]
 }

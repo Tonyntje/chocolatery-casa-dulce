@@ -15,7 +15,7 @@ const getConditionalHeaderStyle = (size: HeaderLevel) => {
 export const Heading = ({children, level, size}: HeaderType) => {
     const Element = level;
     return(
-        <Element className={getConditionalHeaderStyle(size)}>
+        <Element className={`font-bold ${getConditionalHeaderStyle(size)}`}>
             {children}
         </Element>
     )
